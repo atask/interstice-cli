@@ -1,0 +1,43 @@
+{
+  "name": "interstice-cli",
+  "version": "1.0.0",
+  "description": "Simple NodeJS Icecast/SHOUTcast stream recorder",
+  "scripts": {
+    "lint": "standard cli.js test*.js",
+    "test": "tap test.js",
+    "test:ui": "node test-ui.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atask/interstice-cli.git"
+  },
+  "author": "Allan Taschini <allan.taschini@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/atask/interstice-cli/issues"
+  },
+  "homepage": "https://github.com/atask/interstice-cli#readme",
+  "bin": {
+    "interstice": "cli.js"
+  },
+  "files": [
+    "cli.js"
+  ],
+  "engines": {
+    "node": ">=9.4.0"
+  },
+  "dependencies": {
+    "commander": "2.19.0",
+    "interstice": "3.0.2",
+    "ms": "2.1.1",
+    "ora": "3.0.0",
+    "tunnel": "0.0.6"
+  },
+  "devDependencies": {
+    "mock-stdin": "0.3.1",
+    "proxyquire": "2.1.0",
+    "sinon": "7.1.0",
+    "standard": "12.0.1",
+    "tap": "12.0.1"
+  }
+}
