@@ -45,11 +45,11 @@ class IntersticeFakeUI extends EventEmitter {
   }
 
   _startSong () {
-    let song = `song-${this._connection}-${++this._song}`
-    this.emit('song:start', song)
+    let title = `song-${this._connection}-${++this._song}`
+    this.emit('song:start', { title })
     this._drawInterval(() => {
       if (this._test(this._probability.connection)) {
-        this.emit('song:complete', song)
+        this.emit('song:complete', { title })
         this._startSong()
       } else {
         this.emit('error', new DataTimeoutError(this._timeout))

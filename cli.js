@@ -62,11 +62,11 @@ function runRip (endpoint) {
       connectionRetries = 0
       ora.succeed(`Connected to ${endpoint}`)
     })
-    .on('song:start', title => {
-      ora.start(`Downloading ${title}`)
+    .on('song:start', song => {
+      ora.start(`Downloading ${song.title}`)
     })
-    .on('song:complete', title => {
-      ora.succeed(`Completed ${title}`)
+    .on('song:complete', song => {
+      ora.succeed(`Completed ${song.title}`)
     })
     .on('stop', () => {
       ora.info('Exited gracefully')

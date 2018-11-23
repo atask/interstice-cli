@@ -45,11 +45,9 @@ tap.test('forcefully exit after 2 sigints', t => {
   })
 
   stdin.send('\u0003', 'utf8')
-  // process.stdin.emit('keypress', '\u0003')
   t.ok(stopSpy.calledOnce, 'ripping is stopped')
 
   stdin.send('\u0003', 'utf8')
-  // process.stdin.emit('keypress', '\u0003')
   t.ok(exitStub.called, 'process exits')
 
   t.end()
